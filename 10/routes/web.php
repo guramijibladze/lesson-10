@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('profile', function () {
-    return 'welcome';
-});
+
+
+Route::get('/profile/index', 'ProfileController@index')->name('profile.index');
+Route::get('/profile/create', 'ProfileController@create')->name('profile.create');
+Route::get('/profile/id','ProfileController@getWhereId')->name('profile.id');
+Route::post('/profile/store','ProfileController@store')->name('profile.store');
